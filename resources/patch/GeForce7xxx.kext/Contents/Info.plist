@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>GeForce7xxx</string>
+	<key>CFBundleGetInfoString</key>
+	<string>GeForce7xxx 7.4.1 270.01.00f10</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.GeForce7xxx</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>NVIDIA GeForce7xxx Kernel Extension</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>7.4.1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>7.0.4</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>GeForce7xxx</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.GeForce7xxx</string>
+			<key>IOCFPlugInTypes</key>
+			<dict>
+				<key>ACCF0000-0000-0000-0000-000a2789904e</key>
+				<string>GeForce7xxxGA.plugin</string>
+			</dict>
+			<key>IOClass</key>
+			<string>NVLegacyKernel</string>
+			<key>IOMatchCategory</key>
+			<string>IOAccelerator</string>
+			<key>IOPCIMatch</key>
+			<string>
+				0x004010de&amp;0xfff0ffff
+				0x00f010de&amp;0xfff0ffff
+				0x022010de&amp;0xfff0ffff
+				0x014010de&amp;0xfff0ffff
+				0x016010de&amp;0xfff0ffff
+				0x009010de&amp;0xfff0ffff
+				0x01d010de&amp;0xfff0ffff
+				0x039010de&amp;0xfff0ffff
+				0x029010de&amp;0xfff0ffff
+			</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>IOSourceVersion</key>
+			<string>7.4.1</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2000-2009 Apple Inc. All rights reserved.</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.NVDAResman.G7xxx</key>
+		<string>1.2.0</string>
+		<key>com.apple.iokit.IOGraphicsFamily</key>
+		<string>1.0.0b1</string>
+		<key>com.apple.iokit.IONDRVSupport</key>
+		<string>1.0.0b1</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>1.0.0b1</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.private</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>8.0.0</string>
+	</dict>
+</dict>
+</plist>

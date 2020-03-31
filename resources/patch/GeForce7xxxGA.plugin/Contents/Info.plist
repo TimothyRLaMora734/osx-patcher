@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>GeForce7xxxGA</string>
+	<key>CFBundleGetInfoString</key>
+	<string>GeForce7xxxGA 7.4.1 270.01.00f10</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.GeForce7xxxGA</string>
+	<key>CFBundleName</key>
+	<string>NVIDIA GeForce7xxx Graphics Driver</string>
+	<key>CFBundleShortVersionString</key>
+	<string>7.4.1</string>
+	<key>CFBundleVersion</key>
+	<string>7.0.4</string>
+	<key>CFPlugInDynamicRegistration</key>
+	<string>NO</string>
+	<key>CFPlugInFactories</key>
+	<dict>
+		<key>bb67b294-dd52-4bd9-b6f9-de54c17aea87</key>
+		<string>GeForce7xxxGAFactory</string>
+	</dict>
+	<key>CFPlugInTypes</key>
+	<dict>
+		<key>ACCF0000-0000-0000-0000-000a2789904e</key>
+		<array>
+			<string>bb67b294-dd52-4bd9-b6f9-de54c17aea87</string>
+		</array>
+	</dict>
+	<key>NSExecutable</key>
+	<string>GeForce7xxxGA</string>
+	<key>Personality</key>
+	<dict>
+		<key>IOProviderClass</key>
+		<string>IOFramebuffer</string>
+	</dict>
+</dict>
+</plist>
