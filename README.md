@@ -12,7 +12,7 @@ I'd like to the thank the following people, and many others, for their research,
 - [RMC GitHub](https://github.com/rmc-team)
 - [RMC Website](https://www.rmc-team.ch/)
 - [RMC Twitter](https://twitter.com/_rmcteam)
-- ~~More Documentation~~ Coming Soon
+- [More Documentation](https://www.rmc-team.ch/osx-patcher)
 
 # Supported Macs
 ## iMacs
