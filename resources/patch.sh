@@ -455,22 +455,6 @@ Repair_Permissions()
 		Repair "$volume_path"/System/Library/Frameworks/OpenGL.framework
 	fi
 
-	if [[ $volume_version_short == "10.11" ]]; then
-		Repair "$volume_path"/System/Library/Extensions/AppleHIDMouse.kext
-		Repair "$volume_path"/System/Library/Extensions/AppleIRController.kext
-		Repair "$volume_path"/System/Library/Extensions/AppleTopCase.kext
-		Repair "$volume_path"/System/Library/Extensions/AppleUSBMultitouch.kext
-		Repair "$volume_path"/System/Library/Extensions/AppleUSBTopCase.kext
-		Repair "$volume_path"/System/Library/Extensions/IOBDStorageFamily.kext
-		Repair "$volume_path"/System/Library/Extensions/IOBluetoothFamily.kext
-		Repair "$volume_path"/System/Library/Extensions/IOBluetoothHIDDriver.kext
-		Repair "$volume_path"/System/Library/Extensions/IOSerialFamily.kext
-		Repair "$volume_path"/System/Library/Extensions/IOUSBFamily.kext
-		Repair "$volume_path"/System/Library/Extensions/IOUSBHostFamily.kext
-		Repair "$volume_path"/System/Library/Extensions/IOUSBMassStorageClass.kext
-		Repair "$volume_path"/System/Library/Extensions/SIPManager.kext
-	fi
-	
 	Repair "$volume_path"/System/Library/Extensions/AppleHDA.kext
 	Repair "$volume_path"/System/Library/Extensions/IOAudioFamily.kext
 	echo -e $(date "+%b %m %H:%M:%S") ${move_up}${erase_line}${text_success}"+ Repaired permissions."${erase_style}
