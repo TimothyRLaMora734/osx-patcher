@@ -341,7 +341,7 @@ Patch_Volume()
 
 	echo -e $(date "+%b %m %H:%M:%S") ${move_up}${erase_line}${text_success}"+ Patched graphics drivers."${erase_style}
 
-	if [[ $patch_frameworks == [2-3] ]]; then
+	if [[ $patch_frameworks == [2-3] && ! -d $volume_path"/System/Library/Frameworks.backup" ]]; then
 		echo -e $(date "+%b %m %H:%M:%S") ${text_progress}"> Backing up original ML graphics frameworks."${erase_style}
 		mkdir "$volume_path"/System/Library/Frameworks.backup
 		mv "$volume_path"/System/Library/Frameworks/OpenCL.framework "$volume_path"/System/Library/Frameworks.backup/
