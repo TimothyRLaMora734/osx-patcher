@@ -178,6 +178,12 @@ Check_Volume_Support()
 	fi
 }
 
+Repair()
+{
+	chown -R 0:0 "$@"
+	chmod -R 755 "$@"
+}
+
 Restore_Volume()
 {
 	echo -e $(date "+%b %m %H:%M:%S") ${text_progress}"> Removing boot.efi patch."${erase_style}
@@ -259,6 +265,18 @@ Restore_Volume()
 	rm -R "$volume_path"/System/Library/Extensions/NVDAResmanG7xxx.kext
 	rm -R "$volume_path"/System/Library/Extensions/NVSMU.kext
 	echo -e $(date "+%b %m %H:%M:%S") ${move_up}${erase_line}${text_success}"+ Removed graphics drivers patch."${erase_style}
+
+	if [[ $volume_version_short == "10.8" && -d $volume_path"/System/Library/Frameworks.backup" ]]; then
+		echo -e $(date "+%b %m %H:%M:%S") ${text_progress}"> Restoring original graphics frameworks."${erase_style}
+		rm -R "$volume_path"/System/Library/Frameworks/OpenCL.framework
+		rm -R "$volume_path"/System/Library/Frameworks/OpenGL.framework
+		cp -R "$volume_path"/System/Library/Frameworks.backup/OpenCL.framework "$volume_path"/System/Library/Frameworks/
+		cp -R "$volume_path"/System/Library/Frameworks.backup/OpenGL.framework "$volume_path"/System/Library/Frameworks/
+		Repair "$volume_path"/System/Library/Frameworks/OpenCL.framework
+		Repair "$volume_path"/System/Library/Frameworks/OpenGL.framework
+		rm -R "$volume_path"/System/Library/Frameworks.backup
+		echo -e $(date "+%b %m %H:%M:%S") ${move_up}${erase_line}${text_success}"+ Restored original graphics frameworks."${erase_style}
+	fi
 
 	echo -e $(date "+%b %m %H:%M:%S") ${text_progress}"> Removing audio drivers patch."${erase_style}
 	rm -R "$volume_path"/System/Library/Extensions/AppleHDA.kext
